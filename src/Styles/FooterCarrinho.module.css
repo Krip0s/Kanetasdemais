@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+/* Estilos do footer */
+.footer {
+  background: #333;
+  color: rgb(255, 255, 255);
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+}
+
+.containerFooter {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerContainer {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footerSecao h3 {
+  margin-bottom: 1rem;
+  color: rgb(200, 125, 130);
+}
+
+.footerSecao p,
+.footerSecao ul,
+.footerSecao li {
+  margin: 0.5rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.footerSecao ul {
+  padding-left: 0;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #555;
+  margin-top: 2rem;
+  color: #ccc;
+}/*# sourceMappingURL=FooterCarrinho.module.css.map */

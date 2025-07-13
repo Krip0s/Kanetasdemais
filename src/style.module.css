@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com");
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: rgb(200, 125, 130);
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.carrinho {
+  font-size: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.8;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  font-family: inherit;
+  transition: opacity 0.3s;
+}
+
+.btn-produtos {
+  background: rgb(200, 125, 130);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: background-color 0.3s;
+}
+
+.close-modal:hover {
+  background-color: rgb(200, 125, 130);
+}
+
+.produtos {
+  padding: 4rem 0;
+}
+
+.produtos h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.produto {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+.produto-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.produto-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.produto:hover .produto-img img {
+  transform: scale(1.05);
+}
+
+.produto-info {
+  padding: 1.5rem;
+}
+
+.produto-nome {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.produto-preco {
+  font-size: 1.4rem;
+  color: rgb(200, 125, 130);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: rgb(228, 190, 193);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: rgb(214, 158, 161);
+}
+
+.sobre {
+  background: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.sobre-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.sobre-img {
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sobre-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sobre-texto p {
+  margin-bottom: 1rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-secao h3 {
+  margin-bottom: 1rem;
+  color: rgb(200, 125, 130);
+}
+
+.footer-secao ul {
+  list-style: none;
+}
+
+.footer-secao ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-secao ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-secao ul li a:hover {
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #555;
+  margin-top: 2rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(200, 125, 130);
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .sobre-container {
+    grid-template-columns: 1fr;
+  }
+  .sobre-img {
+    height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .produtos h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=style.module.css.map */
