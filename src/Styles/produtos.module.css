@@ -26,7 +26,7 @@ body {
 
 .produtosBanner {
   border-top: 1px solid #ddd;
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   padding: 60px 20px;
   margin-bottom: 40px;
@@ -77,9 +77,9 @@ body {
   white-space: nowrap;
 }
 .categoriaBtn.ativo {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
-  border-color: rgb(200, 125, 130);
+  border-color: #ffafc7;
 }
 
 .busca {
@@ -93,7 +93,7 @@ body {
 .busca input[type=text] {
   flex: 1;
   padding: 10px 15px;
-  border: 2px solid rgb(200, 125, 130);
+  border: 2px solid #ffafc7;
   border-radius: 20px 0 0 20px;
   font-family: "Lexend", sans-serif;
   outline: none;
@@ -104,7 +104,7 @@ body {
 }
 
 .buscaBtn {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -161,7 +161,7 @@ body {
 }
 
 .paginaAtiva {
-  background-color: rgb(200, 125, 130);
+  background-color: #ffafc7;
   color: white;
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(200, 125, 130, 0.3);
@@ -170,7 +170,7 @@ body {
 /* Seta de próxima página */
 .pagina:last-child {
   background-color: transparent;
-  color: rgb(200, 125, 130);
+  color: #ffafc7;
   font-size: 1.2rem;
 }
 .pagina:last-child:hover {
@@ -208,12 +208,12 @@ body {
 
 .filtroLabel {
   font-weight: bold;
-  color: rgb(200, 125, 130);
+  color: #ffafc7;
   margin: 0;
 }
 
 .filtroSelect {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -244,7 +244,7 @@ body {
 }
 
 .btn {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -317,14 +317,14 @@ body {
 }
 
 .produtoPreco {
-  color: rgb(200, 125, 130);
+  color: #ffafc7;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
 .btn {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 10px;

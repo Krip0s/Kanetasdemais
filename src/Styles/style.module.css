@@ -28,7 +28,7 @@ h1, h2, h3, .logo {
 }
 
 .headerHome {
-  background-color: rgb(200, 125, 130);
+  background-color: #ffafc7;
   color: white;
   padding: 20px 0;
   position: fixed;
@@ -150,7 +150,7 @@ nav {
 }
 
 .closeModal:hover {
-  background-color: rgb(200, 125, 130);
+  background-color: #ffafc7;
 }
 
 .produtos {
@@ -211,7 +211,7 @@ nav {
 
 .produtoPreco {
   font-size: 1.4rem;
-  color: rgb(200, 125, 130);
+  color: #ffafc7;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -290,7 +290,7 @@ footer {
 
 .footerSecao h3 {
   margin-bottom: 1rem;
-  color: rgb(200, 125, 130);
+  color: #ffafc7;
 }
 
 .footerSecao ul {
@@ -328,7 +328,7 @@ footer {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: rgb(200, 125, 130);
+    background-color: #ffafc7;
     flex-direction: column;
     padding: 20px;
     display: none;

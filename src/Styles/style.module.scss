@@ -47,7 +47,7 @@ h1, h2, h3, .logo {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ff67a1 0%, #ff67a1 100%);
   color: white;
   border: none;
   border-radius: 50px;
@@ -67,13 +67,13 @@ h1, h2, h3, .logo {
   }
 
   &:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
     transform: translateY(-50%) scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   }
 
   &.active {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
     transform: translateY(-50%) scale(0.95);
   }
 
@@ -140,7 +140,7 @@ h1, h2, h3, .logo {
 // Cabeçalho do painel
 .sidebarHeader {
   padding: 25px 20px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -229,7 +229,7 @@ h1, h2, h3, .logo {
 
   i {
     font-size: 20px;
-    color: #667eea;
+    color: #ff67a1;
     transition: all 0.3s ease;
   }
 
@@ -241,14 +241,14 @@ h1, h2, h3, .logo {
   &:hover {
     background: linear-gradient(135deg, #667eea08, #764ba208);
     transform: translateX(5px);
-    color: #667eea;
+    color: #ff67a1;
     
     &::before {
       left: 100%;
     }
 
     i {
-      color: #764ba2;
+      color: #ff67a1;
       transform: scale(1.1);
     }
   }
@@ -431,7 +431,8 @@ h1, h2, h3, .logo {
   font-weight: bold;
   transition: background 0.3s;
   margin-left: 10px; 
-
+  margin-right: 12rem;
+  
   &:hover {
     background: darken($color: #ff67a1, $amount: 2) ; 
   }
@@ -737,7 +738,7 @@ footer {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color:rgb(200, 125, 130);
+    background-color:#ffafc7;
     flex-direction: column;
     padding: 20px;
     display: none;

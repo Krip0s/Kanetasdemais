@@ -21,7 +21,7 @@ const Summary = ({ total }) => {
         </div>
         <footer>
           <div>
-            <span>Total:</span>
+            <span>Total: </span>
             <span>R$ {total?.toFixed(2)}</span>
           </div>
         </footer>

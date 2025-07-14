@@ -13,7 +13,7 @@ body {
 
 // Estilos do header
 .CarrinhoHeader {
-  background-color: rgb(200, 125, 130);
+  background-color: #ff67a1;
   color: white;
   padding: 20px 0;
   position: fixed;
@@ -83,7 +83,7 @@ body {
       top: 80px;
       left: 0;
       width: 100%;
-      background-color: #5c6bc0;
+      background-color: #caffb7;
       flex-direction: column;
       padding: 20px;
       display: none;
@@ -140,11 +140,11 @@ table {
         text-align: left;
         padding-bottom: 10px;
         text-transform: uppercase;
-        color: #5c6bc0;
+        color: #ffffff;
         font-size: 17px;
 
         span {
-          background-color: #ffccbc;
+          background-color: #ffcfd8;
           padding: 4px 8px;
           border-radius: 4px;
         }
@@ -205,7 +205,7 @@ table {
 
 // Controles de quantidade
 .qty {
-  background: #ffccbc;
+  background: #ffcfd8;
   display: inline-flex;
   justify-content: space-around;
   min-width: 80px;
@@ -232,14 +232,14 @@ table {
     transition: all 0.3s ease;
 
     &:hover {
-      background: rgba(92, 107, 192, 0.2);
+      background: darken($color: #ffcfd8, $amount: 10);
     }
   }
 }
 
 // Botão de remover
 .remove {
-  background: #d9ada0;
+  background: #ffcfd8;
   border: 0;
   width: 40px;
   height: 40px;
@@ -252,7 +252,7 @@ table {
   transition: all 0.3s ease;
 
   &:hover {
-    background: #c2938a;
+    background: darken($color: #ffcfd8, $amount: 10);
   }
 }
 
@@ -271,7 +271,7 @@ aside {
       font-weight: 600;
       background: #eee;
       border-bottom: 1px solid #ddd;
-      background: #e9ecef ;
+      background: #ffcfd8; ;
 
       &.resumo {
         color: #333;
@@ -314,7 +314,7 @@ aside {
 
     footer {
       padding: 10px 20px;
-      background: #e9ecef;
+      background: #ffcfd8;
       font-size: 18px;
       font-weight: 600;
       display: flex;
@@ -323,7 +323,7 @@ aside {
       border-top: 1px solid #ddd;
 
       span:last-child {
-        color: #5c6bc0;
+        color: #caffb7;
         font-size: 20px;
       }
     }
@@ -333,7 +333,7 @@ aside {
     border: 0;
     padding: 15px 20px;
     color: white;
-    background: #5c6bc0;
+    background: #caffb7;
     display: block;
     width: 100%;
     text-transform: uppercase;

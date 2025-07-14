@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background: #5c6bc0;
+  background: #caffb7;
   color: white;
   font-size: 24px;
   padding: 20px 0;
@@ -66,7 +66,7 @@ header .menu-toggle {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: #5c6bc0;
+    background-color: #caffb7;
     flex-direction: column;
     padding: 20px;
     display: none;
@@ -111,11 +111,11 @@ table thead tr th {
   text-align: left;
   padding-bottom: 10px;
   text-transform: uppercase;
-  color: #5c6bc0;
+  color: #caffb7;
   font-size: 17px;
 }
 table thead tr th span {
-  background-color: #ffccbc;
+  background-color: #ffcfd8;
   padding: 4px 8px;
   border-radius: 4px;
 }
@@ -160,7 +160,7 @@ table tbody tr td.Empty {
 }
 
 .qty {
-  background: #ffccbc;
+  background: #ffcfd8;
   display: inline-flex;
   justify-content: space-around;
   min-width: 80px;
@@ -263,14 +263,14 @@ aside .box footer {
   border-top: 1px solid #ddd;
 }
 aside .box footer span:last-child {
-  color: #5c6bc0;
+  color: #caffb7;
   font-size: 20px;
 }
 aside .finalizar-compra {
   border: 0;
   padding: 15px 20px;
   color: white;
-  background: #5c6bc0;
+  background: #caffb7;
   display: block;
   width: 100%;
   text-transform: uppercase;

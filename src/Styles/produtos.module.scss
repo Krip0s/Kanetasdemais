@@ -28,7 +28,7 @@ body {
 .produtosBanner {
 	
 	border-top: 1px solid #ddd;
-	background: rgb(200, 125, 130);
+	background: #ff67a1;
 	color: white;
 	padding: 60px 20px;
 	margin-bottom: 40px;
@@ -37,6 +37,7 @@ body {
 	.bannerContent {
 		
 		text-align: center;
+    padding-top: 17px ;
 		font-size: 20px;
 		max-width: 800px;
 		margin: 0 auto;
@@ -83,9 +84,9 @@ body {
   white-space: nowrap;
 
   &.ativo {
-    background: rgb(200, 125, 130);
+    background: #ffafc7;
     color: white;
-    border-color: rgb(200, 125, 130);
+    border-color: #ffafc7;
   }
 }
 
@@ -100,19 +101,19 @@ body {
 .busca input[type="text"] {
   flex: 1;
   padding: 10px 15px;
-  border: 2px solid rgb(200, 125, 130);
+  border: 2px solid #ffafc7;
   border-radius: 20px 0 0 20px; // Arredonda apenas o lado esquerdo
   font-family: "Lexend", sans-serif;
   outline: none;
   transition: border-color 0.3s;
 
   &:focus {
-    border-color: darken(rgb(200, 125, 130), 10%);
+    border-color: darken(#ffafc7, 10%);
   }
 }
 
 .buscaBtn {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -122,7 +123,7 @@ body {
   transition: background 0.3s;
 
   &:hover {
-    background: darken(rgb(200, 125, 130), 10%);
+    background: darken(#ffafc7, 10%);
   }
 }
 
@@ -174,7 +175,7 @@ body {
 }
 
 .paginaAtiva {
-  background-color: rgb(200, 125, 130);
+  background-color: #ffafc7;
   color: white;
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(200, 125, 130, 0.3);
@@ -183,7 +184,7 @@ body {
 /* Seta de próxima página */
 .pagina:last-child {
   background-color: transparent;
-  color: rgb(200, 125, 130);
+  color: #ffafc7;
   font-size: 1.2rem;
   
   &:hover {
@@ -224,12 +225,12 @@ body {
 
 .filtroLabel {
   font-weight: bold;
-  color: rgb(200, 125, 130); // Cor para combinar com o tema
+  color: #ffafc7; // Cor para combinar com o tema
   margin: 0; // Remove margens padrão
 }
 
 .filtroSelect {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -260,7 +261,7 @@ body {
 }
 
 .btn {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -336,14 +337,14 @@ body {
 }
 
 .produtoPreco {
-  color: rgb(200, 125, 130);
+  color: #ffafc7;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
 .btn {
-  background: rgb(200, 125, 130);
+  background: #ffafc7;
   color: white;
   border: none;
   padding: 10px;
