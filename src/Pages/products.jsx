@@ -9,7 +9,15 @@ import classes from '../Styles/products.module.scss';
 function products() {
   return (
     <>
-     <div className={classes.algo}></div>
+      <PageHeaderHome />
+        <div className={classes.separator}></div>
+      <div className={classes.productsPage}>
+        <BannerContent/>
+        <ProductsConteiner/>
+        <Paginação/>
+      </div>
+     
+    <FooterHome />
     </>
     
   );

@@ -12,7 +12,7 @@ body {
 
 
 // Estilos do header
-.CarrinhoHeader {
+.cartHeader {
   background-color: #ff67a1;
   color: white;
   padding: 20px 0;
@@ -100,8 +100,8 @@ body {
   }
 }
 
-// Estilos da página do carrinho
-.carrinhoPage {
+// Estilos da página do cart
+.cartPage {
   main {
     background: #fff;
     padding:  30px 70px 18.9vh;
@@ -360,7 +360,7 @@ button {
 
 // Responsividade
 @media (max-width: 768px) {
-  .carrinhoPage main {
+  .cartPage main {
     padding: 0 15px 30px;
 
     .content {

@@ -25,8 +25,8 @@ function FooterHome() {
             <h3>Links Rápidos</h3>
             <ul>
               <li><Link to="/">Início</Link></li>
-              <li><Link to="/Produtos" className={classes.btnProdutosFooter}>Ver Produtos</Link></li>
-              <li><Link to="/Produtos">Promoções</Link></li>
+              <li><Link to="/products" className={classes.btnproductsFooter}>Ver products</Link></li>
+              <li><Link to="/products">Promoções</Link></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); toggleModal("sobreModal"); }}>Sobre Nós</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); toggleModal("contatoModal"); }}>Contato</a></li>
             </ul>
@@ -52,7 +52,7 @@ function FooterHome() {
                 <div className={classes.modalContent}>
                   <span className={classes.closeModal} onClick={() => toggleModal("sobreModal")}>&times;</span>
                   <h1>Sobre Nós</h1>
-                  <p>A Kanetas D+ está no mercado há mais de 10 anos, oferecendo produtos de qualidade para estudantes,
+                  <p>A Kanetas D+ está no mercado há mais de 10 anos, oferecendo products de qualidade para estudantes,
                       profissionais e entusiastas de artesanato.</p>
                   <p>Nosso compromisso é proporcionar a melhor experiência de compra, com atendimento personalizado e preços
                       justos.</p>

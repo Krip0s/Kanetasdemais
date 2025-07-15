@@ -1,11 +1,11 @@
 import React from "react";
 import classes from '../../Styles/style.module.scss';
 
-const ProdutosMain = () => {
+const ProductsMain = () => {
   return (
-    <section className={`${classes.produtos} ${classes.container}`}>
-      <h2>Produtos em Destaque</h2>
-      <div className={classes.produtosGrid}>
+    <section className={`${classes.products} ${classes.container}`}>
+      <h2>produtos em Destaque</h2>
+      <div className={classes.productsGrid}>
         {[1, 2, 3, 4].map((i) => (
           <div className={classes.produto} key={i}>
             <div className={classes.produtoImg}>
@@ -23,4 +23,4 @@ const ProdutosMain = () => {
   );
 };
 
-export default ProdutosMain;
+export default ProductsMain;

@@ -49,7 +49,7 @@ nav {
   font-weight: bold;
 }
 
-.carrinho {
+.cart {
   font-size: 30px;
 }
 
@@ -99,7 +99,7 @@ nav {
   font-size: 23px;
 }
 
-.btnProdutos {
+.btnproducts {
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -153,18 +153,18 @@ nav {
   background-color: #ffafc7;
 }
 
-.produtos {
+.products {
   padding: 4rem 0;
 }
 
-.produtos h2 {
+.products h2 {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.5rem;
   color: #333;
 }
 
-.produtosGrid {
+.productsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
@@ -347,7 +347,7 @@ footer {
   }
 }
 @media (max-width: 480px) {
-  .produtos h2 {
+  .products h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
   }

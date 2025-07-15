@@ -1,7 +1,7 @@
 import React from "react";
-import classes from '../../Styles/FooterCarrinho.module.scss';
+import classes from '../../Styles/Footercart.module.scss';
 
-function FooterCarrinho() {
+function Footercart() {
   return (
     <footer className={classes.footer}>
       <div className={`${classes.container} ${classes.footerContainer}`}>
@@ -27,4 +27,4 @@ function FooterCarrinho() {
   );
 }
 
-export default FooterCarrinho;
+export default Footercart;

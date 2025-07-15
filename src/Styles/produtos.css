@@ -64,7 +64,7 @@ h3,
 }
 
 @media (max-width: 400px) {
-  .produtos-grid {
+  .products-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -138,4 +138,4 @@ span {
 
 span:hover {
   background-color: rgb(108, 108, 255);
-}/*# sourceMappingURL=produtos.css.map */
+}/*# sourceMappingURL=products.css.map */

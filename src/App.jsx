@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import PageHeaderHome from "./layout/Home/PageHeaderHome";
 import FooterHome from "./layout/Home/FooterHome";
 import Home from "./Pages/Home"; 
-import Produtos from "./Pages/Produtos";
-import Carrinho from "./Pages/Carrinho";
+import Products from "./Pages/products";
+import Cart from "./Pages/cart";
 import Login from "./Pages/Login";
 
 function App() {
@@ -16,8 +16,8 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/produtos" element={<Produtos />} />
-        <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/Cart" element={<Cart />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
       

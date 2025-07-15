@@ -80,23 +80,23 @@ header .menu-toggle {
   }
 }
 
-.carrinho-page main {
+.cart-page main {
   background: #fff;
   padding: 0 30px 30px;
 }
-.carrinho-page main .page-title {
+.cart-page main .page-title {
   font-size: 40px;
   padding: 50px 0;
   text-align: center;
 }
-.carrinho-page main .content {
+.cart-page main .content {
   display: flex;
   gap: 20px;
 }
-.carrinho-page main .content section {
+.cart-page main .content section {
   flex: 1;
 }
-.carrinho-page main .content aside {
+.cart-page main .content aside {
   min-width: 250px;
 }
 
@@ -293,13 +293,13 @@ button {
 }
 
 @media (max-width: 768px) {
-  .carrinho-page main {
+  .cart-page main {
     padding: 0 15px 30px;
   }
-  .carrinho-page main .content {
+  .cart-page main .content {
     flex-direction: column;
   }
-  .carrinho-page main .page-title {
+  .cart-page main .page-title {
     font-size: 28px;
     padding: 30px 0;
   }
@@ -320,4 +320,4 @@ button {
   aside {
     margin-top: 20px;
   }
-}/*# sourceMappingURL=carrinho.css.map */
+}/*# sourceMappingURL=cart.css.map */

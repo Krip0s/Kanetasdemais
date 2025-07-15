@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import PageHeader from "../layout/Carrinho/PageHeader";
-import PageTitle from "../layout/Carrinho/PageTitle";
-import Summary from "../layout/Carrinho/Summary"; 
-import TableRow from "../layout/Carrinho/TableRow";
-import classes from '../Styles/carrinho.module.scss'; 
-import FooterCarrinho from "../layout/Carrinho/FooterCarrinho";
+import PageHeader from "../layout/cart/PageHeader";
+import PageTitle from "../layout/cart/PageTitle";
+import Summary from "../layout/cart/Summary"; 
+import TableRow from "../layout/cart/TableRow";
+import classes from '../Styles/cart.module.scss'; 
+import Footercart from "../layout/cart/Footercart";
 
-function Carrinho() {
-  // Estado inicial do carrinho
+function cart() {
+  // Estado inicial do cart
   const initialCart = [
     {
       id: 1,
@@ -48,7 +48,7 @@ function Carrinho() {
     setCart(cart.filter(item => item.id !== id));
   };
 
-  // Função para resetar o carrinho ao estado inicial
+  // Função para resetar o cart ao estado inicial
   const resetCart = () => {
     setCart([...initialCart]);
   };
@@ -58,7 +58,7 @@ function Carrinho() {
   const total = subtotal + frete;
 
   return (
-    <div className={classes.carrinhoPage}>
+    <div className={classes.cartPage}>
       <PageHeader />
       
       {/* Botão de Debug */}
@@ -115,7 +115,7 @@ function Carrinho() {
                 {cart.length === 0 && (
                   <tr>
                     <td colSpan="5" className={classes.Empty}>
-                      <b>Carrinho Vazio</b>
+                      <b>cart Vazio</b>
                     </td>
                   </tr>
                 )}
@@ -127,9 +127,9 @@ function Carrinho() {
           </aside>
         </div>
       </main>
-      <FooterCarrinho/>
+      <Footercart/>
     </div>
   );
 }
 
-export default Carrinho;
+export default cart;

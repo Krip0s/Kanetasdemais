@@ -9,9 +9,9 @@ const AddToCartButton = ({ item, onAddToCart }) => {
     <button 
       onClick={handleClick}
       type="button"
-      aria-label={`Adicionar ${item.name} ao carrinho`}
+      aria-label={`Adicionar ${item.name} ao cart`}
     >
-      Adicionar ao Carrinho
+      Adicionar ao cart
     </button>
   );
 };

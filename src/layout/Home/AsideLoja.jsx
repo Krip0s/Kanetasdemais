@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import classes from '../../Styles/style.module.scss';
 
-function Aside() {
+function AsideLoja() {
     const [isOpen, setIsOpen] = useState(false);
     const [showSobreModal, setShowSobreModal] = useState(false);
     const [showContatoModal, setShowContatoModal] = useState(false);
@@ -20,24 +20,24 @@ function Aside() {
         setIsOpen(false);
     };
 
-    const categoriasProdutos = [
-        { nome: "Material Escolar", icone: "bx-pencil", link: "/Produtos?categoria=escolar" },
-        { nome: "Material de Escritório", icone: "bx-briefcase", link: "/Produtos?categoria=escritorio" },
-        { nome: "Artesanato", icone: "bx-palette", link: "/Produtos?categoria=artesanato" },
-        { nome: "Papelaria", icone: "bx-file", link: "/Produtos?categoria=papelaria" },
-        { nome: "Promoções", icone: "bx-tag", link: "/Produtos?categoria=promocoes" }
+    const categoriasproductsServices = [
+        { nome: "Impressão ", icone: "bx-printer"},
+        { nome: "Plastificação", icone: "bx-book-open" },
+        { nome: "Encardenações", icone: "bx-book" },
+        { nome: "Carimbos", icone: "bx-color", },
+        { nome: "Acessorios para informatica", icone: "bx-mouse",  }
     ];
 
     return (
         <>
             {/* Botão para abrir o painel lateral */}
             <button 
-                className={`${classes.sidebarToggle} ${isOpen ? classes.active : ''}`}
+                className={`${classes.sidebarToggleServices} ${isOpen ? classes.active : ''}`}
                 onClick={toggleSidebar}
                 aria-label="Abrir menu de categorias"
             >
                 <i className="bx bx-menu"></i>
-                <span>Categorias</span>
+                <span>Serviços Loja</span>
             </button>
 
             {/* Overlay para fechar o painel quando clicar fora */}
@@ -50,8 +50,8 @@ function Aside() {
 
             {/* Painel lateral direito */}
             <aside className={`${classes.sidebar} ${isOpen ? classes.sidebarOpen : ''}`}>
-                <div className={classes.sidebarHeader}>
-                    <h3>Categorias de Produtos</h3>
+                <div className={classes.sidebarHeaderServices}>
+                    <h3>Serviços loja física</h3>
                     <button 
                         className={classes.sidebarClose}
                         onClick={closeSidebar}
@@ -65,16 +65,16 @@ function Aside() {
                     <ul className={classes.sidebarMenu}>
                         <li className={classes.sidebarItem}>
                             <Link 
-                                to="/Produtos" 
+                                to="/products" 
                                 className={`${classes.sidebarLink} ${classes.allProducts}`}
                                 onClick={closeSidebar}
                             >
                                 <i className="bx bx-grid-alt"></i>
-                                <span>Todos os Produtos</span>
+                                <span>Nossos Serviços</span>
                             </Link>
                         </li>
                         
-                        {categoriasProdutos.map((categoria, index) => (
+                        {categoriasproductsServices.map((categoria, index) => (
                             <li className={classes.sidebarItem} key={index}>
                                 <Link 
                                     to={categoria.link} 
@@ -115,7 +115,7 @@ function Aside() {
                     <div className={classes.modalContent}>
                         <span className={classes.closeModal} onClick={() => toggleModal("sobreModal")}>&times;</span>
                         <h1>Sobre Nós</h1>
-                        <p>A Kanetas D+ está no mercado há mais de 10 anos, oferecendo produtos de qualidade para estudantes,
+                        <p>A Kanetas D+ está no mercado há mais de 10 anos, oferecendo products de qualidade para estudantes,
                             profissionais e entusiastas de artesanato.</p>
                         <p>Nosso compromisso é proporcionar a melhor experiência de compra, com atendimento personalizado e preços
                             justos.</p>
@@ -138,4 +138,4 @@ function Aside() {
     );
 }
 
-export default Aside;
+export default AsideLoja;

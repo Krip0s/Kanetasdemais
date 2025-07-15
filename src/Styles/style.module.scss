@@ -25,7 +25,7 @@ h1, h2, h3, .logo {
 }
 
 .container {
-  width: 90%;
+  padding: 5px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -46,6 +46,52 @@ h1, h2, h3, .logo {
   position: fixed;
   top: 50%;
   right: 20px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #ff67a1 0%, #ff67a1 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  i {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    right: 15px;
+    padding: 10px 15px;
+    font-size: 12px;
+    
+    span {
+      display: none;
+    }
+  }
+}
+
+.sidebarToggleServices {
+  position: fixed;
+  top: 50%;
+  right: 200px;
   transform: translateY(-50%);
   background: linear-gradient(135deg, #ff67a1 0%, #ff67a1 100%);
   color: white;
@@ -164,6 +210,33 @@ h1, h2, h3, .logo {
   }
 }
 
+.sidebarHeaderServices {
+  padding: 25px 20px 20px;
+  background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 6vh;
+  }
+}
+
 // Botão de fechar
 .sidebarClose {
   background: none;
@@ -259,7 +332,7 @@ h1, h2, h3, .logo {
     font-weight: 600;
     
     i {
-      color: #764ba2;
+      color: #ff67a1;
     }
   }
 
@@ -452,7 +525,7 @@ nav {
   font-weight: bold;
 }
 
-.carrinho{
+.cart{
   font-size: 30px;
 }
 
@@ -504,10 +577,10 @@ nav {
   font-size: 23px;
 }
 
-.btnProdutos {
+.btnproducts {
   
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0px 1rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -561,18 +634,18 @@ nav {
 }
 
 
-.produtos {
+.products {
   padding: 4rem 0;
 }
 
-.produtos h2 {
+.products h2 {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.5rem;
   color: #333;
 }
 
-.produtosGrid {
+.productsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
@@ -762,7 +835,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .produtos h2 {
+  .products h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
   }

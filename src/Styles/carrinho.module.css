@@ -9,7 +9,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.CarrinhoHeader {
+.cartHeader {
   background-color: #ffafc7;
   color: white;
   padding: 20px 0;
@@ -23,28 +23,28 @@ body {
   display: flex;
   justify-content: center;
 }
-.CarrinhoHeader .containerHeader {
+.cartHeader .containerHeader {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
-.CarrinhoHeader nav {
+.cartHeader nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.CarrinhoHeader .logo {
+.cartHeader .logo {
   font-size: 24px;
   font-weight: bold;
 }
-.CarrinhoHeader .menu {
+.cartHeader .menu {
   display: flex;
   list-style: none;
 }
-.CarrinhoHeader .menu li {
+.cartHeader .menu li {
   margin-left: 20px;
 }
-.CarrinhoHeader .menu a {
+.cartHeader .menu a {
   color: white;
   text-decoration: none;
   transition: opacity 0.3s;
@@ -52,22 +52,22 @@ body {
   align-items: center;
   gap: 5px;
 }
-.CarrinhoHeader .menu a:hover {
+.cartHeader .menu a:hover {
   opacity: 0.8;
 }
-.CarrinhoHeader .menuToggle {
+.cartHeader .menuToggle {
   display: none;
   cursor: pointer;
   font-size: 24px;
 }
 @media (max-width: 768px) {
-  .CarrinhoHeader {
+  .cartHeader {
     padding: 15px 0;
   }
-  .CarrinhoHeader .menuToggle {
+  .cartHeader .menuToggle {
     display: block;
   }
-  .CarrinhoHeader .menu {
+  .cartHeader .menu {
     position: fixed;
     top: 80px;
     left: 0;
@@ -78,31 +78,31 @@ body {
     display: none;
     z-index: 1000;
   }
-  .CarrinhoHeader .menu.active {
+  .cartHeader .menu.active {
     display: flex;
   }
-  .CarrinhoHeader .menu li {
+  .cartHeader .menu li {
     margin: 10px 0;
   }
 }
 
-.carrinhoPage main {
+.cartPage main {
   background: #fff;
   padding: 30px 70px 18.9vh;
 }
-.carrinhoPage main .pageTitle {
+.cartPage main .pageTitle {
   font-size: 40px;
   padding: 100px 0 30px;
   text-align: center;
 }
-.carrinhoPage main .content {
+.cartPage main .content {
   display: flex;
   gap: 20px;
 }
-.carrinhoPage main .content section {
+.cartPage main .content section {
   flex: 1;
 }
-.carrinhoPage main .content aside {
+.cartPage main .content aside {
   min-width: 250px;
 }
 
@@ -300,13 +300,13 @@ button {
 }
 
 @media (max-width: 768px) {
-  .carrinhoPage main {
+  .cartPage main {
     padding: 0 15px 30px;
   }
-  .carrinhoPage main .content {
+  .cartPage main .content {
     flex-direction: column;
   }
-  .carrinhoPage main .pageTitle {
+  .cartPage main .pageTitle {
     font-size: 28px;
     padding: 30px 0;
   }
@@ -327,4 +327,4 @@ button {
   aside {
     margin-top: 20px;
   }
-}/*# sourceMappingURL=carrinho.module.css.map */
+}/*# sourceMappingURL=cart.module.css.map */

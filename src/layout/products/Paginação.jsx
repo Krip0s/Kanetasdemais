@@ -1,5 +1,5 @@
 import React from "react";
-import classes from '../../Styles/produtos.module.scss';
+import classes from '../../Styles/products.module.scss';
 
 function Paginacao() {
   return (

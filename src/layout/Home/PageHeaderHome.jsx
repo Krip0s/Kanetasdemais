@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import classes from '../../Styles/style.module.scss';
 import Login from "../../Pages/Login";
-import Produtos from '/src/Pages/Produtos';
-import Carrinho from '/src/Pages/Carrinho';
+import products from '/src/Pages/products';
+import cart from '/src/Pages/cart';
 
 function PageHeaderHome() {
   const [menuActive, setMenuActive] = useState(false);
@@ -38,9 +38,9 @@ function PageHeaderHome() {
                 <input type="text" placeholder="Buscar produtos..." />
                 <button className={classes.buscaBtnHeader}>Buscar</button>
               </div>
-              <li><Link to="/Produtos" className={classes.btnProdutos}>Ver Produtos</Link></li>
+              <li><Link to="/products" className={classes.btnproducts}>Ver produtos</Link></li>
               
-              <li><Link to="/Carrinho" className={classes.carrinho}><i className="bx bx-cart"></i></Link></li>
+              <li><Link to="/cart" className={classes.cart}><i className="bx bx-cart"></i></Link></li>
               <li><Link to="/login" className={classes.login}><i className='bx bx-user'></i></Link></li>
             </ul>
           </nav>
@@ -52,7 +52,7 @@ function PageHeaderHome() {
           <div className={classes.modalContent}>
             <span className={classes.closeModal} onClick={() => toggleModal("sobreModal")}>&times;</span>
             <h1>Sobre Nós</h1>
-            <p>A Kanetas D+ está no mercado há mais de 10 anos, oferecendo produtos de qualidade para estudantes,
+            <p>A Kanetas D+ está no mercado há mais de 10 anos, oferecendo products de qualidade para estudantes,
                 profissionais e entusiastas de artesanato.</p>
             <p>Nosso compromisso é proporcionar a melhor experiência de compra, com atendimento personalizado e preços
                 justos.</p>

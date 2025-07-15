@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import classes from '../../Styles/carrinho.module.scss';
+import classes from '../../Styles/cart.module.scss';
 
 const PageHeader = () => {
   return (
-    <header className={classes.CarrinhoHeader}>
+    <header className={classes.cartHeader}>
       <div className={classes.containerHeader}>
         <nav>
           <div className={classes.logo}>Carrinho de Compras</div>

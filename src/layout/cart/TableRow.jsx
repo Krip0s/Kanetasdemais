@@ -1,5 +1,5 @@
 import React from "react";
-import classes from '../../Styles/carrinho.module.scss';
+import classes from '../../Styles/cart.module.scss';
 const TableRow = ({ item, onRemove, onQuantityChange }) => {
   const handleIncrement = () => {
     if (onQuantityChange) {

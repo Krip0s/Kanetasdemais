@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import classes from '../../Styles/produtos.module.scss';
+import classes from '../../Styles/products.module.scss';
 
-function ProdutosContainer() {
+function ProductsContainer() {
   return (
     <div className={classes.container}>
         <div className={classes.categorias}>
@@ -33,7 +33,7 @@ function ProdutosContainer() {
         </div>
 
         <h2 className={classes.categoriaTitulo}>Material Escolar</h2>
-        <div className={classes.produtosGrid}>
+        <div className={classes.productsGrid}>
             <div className={classes.produto}>
                 <div className={classes.promocaoBadge}>-15%</div>
                 <div className={classes.produtoImg}><img src="https://picsum.photos/270/200" alt="Caderno Universitário"/></div>
@@ -78,7 +78,7 @@ function ProdutosContainer() {
         </div>
 
         <h2 className={classes.categoriaTitulo}>Escritório</h2>
-        <div className={classes.produtosGrid}>
+        <div className={classes.productsGrid}>
             <div className={classes.produto}>
                 <div className={classes.produtoImg}><img src="https://picsum.photos/270/200" alt="Agenda 2025"/></div>
                 <div className={classes.produtoInfo}>
@@ -122,7 +122,7 @@ function ProdutosContainer() {
         </div>
 
         <h2 className={classes.categoriaTitulo}>Artesanato</h2>
-        <div className={classes.produtosGrid}>
+        <div className={classes.productsGrid}>
             <div className={classes.produto}>
                 <div className={classes.produtoImg}><img src="https://picsum.photos/270/200" alt="Kit Pincéis Artísticos"/></div>
                 <div className={classes.produtoInfo}>
@@ -166,7 +166,7 @@ function ProdutosContainer() {
         </div>
 
         <h2 className={classes.categoriaTitulo}>Mochilas</h2>
-        <div className={classes.produtosGrid}>
+        <div className={classes.productsGrid}>
             <div className={classes.produto}>
                 <div className={classes.produtoImg}><img src="https://picsum.photos/270/200" alt="Mochila Escolar"/></div>
                 <div className={classes.produtoInfo}>
@@ -212,4 +212,4 @@ function ProdutosContainer() {
   );
 }
 
-export default ProdutosContainer;
+export default ProductsContainer;

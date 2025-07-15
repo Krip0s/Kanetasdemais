@@ -19,12 +19,12 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.produtosPage {
+.productsPage {
   min-height: 100vh;
   padding-top: 20px;
 }
 
-.produtosBanner {
+.productsBanner {
   border-top: 1px solid #ddd;
   background: #ffafc7;
   color: white;
@@ -32,18 +32,18 @@ body {
   margin-bottom: 40px;
   padding: 10vh 0;
 }
-.produtosBanner .bannerContent {
+.productsBanner .bannerContent {
   text-align: center;
   font-size: 20px;
   max-width: 800px;
   margin: 0 auto;
 }
-.produtosBanner .bannerContent h1 {
+.productsBanner .bannerContent h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: 600;
 }
-.produtosBanner .bannerContent p {
+.productsBanner .bannerContent p {
   font-size: 1.2rem;
   opacity: 0.9;
 }
@@ -236,7 +236,7 @@ body {
   padding-right: 35px;
 }
 
-.produtosGrid {
+.productsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 20px;
@@ -336,7 +336,7 @@ body {
 }
 
 /* Garante grid consistente */
-.produtosGrid {
+.productsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 20px;
@@ -344,16 +344,16 @@ body {
 }
 
 @media (max-width: 400px) {
-  .produtosGrid {
+  .productsGrid {
     grid-template-columns: 1fr;
   }
-  .produtosBanner {
+  .productsBanner {
     padding: 40px 15px;
   }
-  .produtosBanner .bannerContent h1 {
+  .productsBanner .bannerContent h1 {
     font-size: 2rem;
   }
-  .produtosBanner .bannerContent p {
+  .productsBanner .bannerContent p {
     font-size: 1rem;
   }
 }
@@ -361,10 +361,10 @@ body {
   .busca input {
     width: 100%;
   }
-  .produtosBanner {
+  .productsBanner {
     padding: 50px 20px;
   }
-  .produtosBanner .bannerContent h1 {
+  .productsBanner .bannerContent h1 {
     font-size: 2.5rem;
   }
-}/*# sourceMappingURL=produtos.module.css.map */
+}/*# sourceMappingURL=products.module.css.map */
