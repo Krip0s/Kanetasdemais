@@ -26,10 +26,7 @@ function ProductsContainer() {
                 </select>
             </div>
 
-            <div className={classes.busca}>
-                <input type="text" placeholder="Buscar produtos..." />
-                <button className={classes.buscaBtn}>Buscar</button>
-            </div>
+            
         </div>
 
         <h2 className={classes.categoriaTitulo}>Material Escolar</h2>

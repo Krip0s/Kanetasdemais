@@ -9,7 +9,7 @@ function BannerContent() {
     <>
  <section className={classes.productsBanner}>
         <div className={classes.bannerContent}>
-            <h1>Nossos products</h1>
+            <h1>Nossos produtos</h1>
             <p>Qualidade e variedade para todas as suas necessidades</p>
         </div>
     </section>

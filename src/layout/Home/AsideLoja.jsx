@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import classes from '../../Styles/style.module.scss';
+import classes from '../../Styles/Sidebar.module.scss';
 
 function AsideLoja() {
     const [isOpen, setIsOpen] = useState(false);

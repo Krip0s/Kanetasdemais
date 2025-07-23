@@ -5,7 +5,9 @@ import FooterHome from "./layout/Home/FooterHome";
 import Home from "./Pages/Home"; 
 import Products from "./Pages/products";
 import Cart from "./Pages/cart";
-import Login from "./Pages/Login";
+import User from "./Pages/User";
+import Register from'./layout/User/Register';
+import Login from './layout/User/Login';
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/User" element={<User />} />
+        <Route path="/Register" element={<Register />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
       

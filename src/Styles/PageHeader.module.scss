@@ -1,0 +1,155 @@
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.headerHome {
+    background-color: #ff67a1;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    padding: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.busca {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.busca input[type="text"] {
+    flex: 1;
+    padding: 10px 8rem;
+    border: 2px solid white;
+    border-radius: 20px; // Arredonda apenas o lado esquerdo
+    font-family: "Lexend", sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+    gap: 10px;
+    justify-content: center;
+
+    &:focus {
+        border-color: darken($color: #ff67a1, $amount: 10);
+    }
+}
+
+.buscaBtnHeader {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-left: 10px;
+    margin-right: 12rem;
+    font-size: 20px;
+
+    &:hover {
+        background: darken($color: #ff67a1, $amount: 2);
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding: 0 20px;
+    padding-right: 25vh;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menuToggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.menuToggle.active {
+    display: block;
+}
+
+
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+
+    
+    }
+
+    .btnproducts {
+        color: white;
+        padding: 0px 1rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+     
+
+        &:hover {
+            background-color: darken($color: #ff67a1, $amount: 2);
+            border-radius: 10px;
+        }
+    }
+
+    .cart {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        
+
+        &:hover {
+            background-color: darken($color: #ff67a1, $amount: 2);
+            border-radius: 100%;
+        }
+
+    }
+
+    .User {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+       
+
+        &:hover {
+            background-color: darken($color: #ff67a1, $amount: 2);
+            border-radius: 100%;
+        }
+    }

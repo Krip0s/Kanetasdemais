@@ -1,0 +1,472 @@
+.sidebarToggle {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #ff67a1 0%, #ff67a1 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  i {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    right: 15px;
+    padding: 10px 15px;
+    font-size: 12px;
+    
+    span {
+      display: none;
+    }
+  }
+}
+
+.sidebarToggleServices {
+  position: fixed;
+  top: 50%;
+  right: 200px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #ff67a1 0%, #ff67a1 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  i {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    right: 15px;
+    padding: 10px 15px;
+    font-size: 12px;
+    
+    span {
+      display: none;
+    }
+  }
+}
+
+// Overlay para fechar o painel
+.sidebarOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+// Painel lateral principal
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  &.sidebarOpen {
+    right: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 300px;
+    right: -300px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+// Cabeçalho do painel
+.sidebarHeader {
+  padding: 25px 20px 20px;
+  background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.sidebarHeaderServices {
+  padding: 25px 20px 20px;
+  background: linear-gradient(135deg, #ffbecb 0%, #ff67a1 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 6vh;
+  }
+}
+
+// Botão de fechar
+.sidebarClose {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+  }
+}
+
+// Navegação do painel
+.sidebarNav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.sidebarMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarItem {
+  margin-bottom: 5px;
+  padding: 0 15px;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  i {
+    font-size: 20px;
+    color: #ff67a1;
+    transition: all 0.3s ease;
+  }
+
+  span {
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #667eea08, #764ba208);
+    transform: translateX(5px);
+    color: #ff67a1;
+    
+    &::before {
+      left: 100%;
+    }
+
+    i {
+      color: #ff67a1;
+      transform: scale(1.1);
+    }
+  }
+
+  &.allProducts {
+    background: linear-gradient(135deg, #667eea15, #764ba215);
+    border: 1px solid #667eea30;
+    font-weight: 600;
+    
+    i {
+      color: #ff67a1;
+    }
+  }
+
+  // Quando é um botão ao invés de link
+  &[type="button"] {
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+  }
+}
+
+// Rodapé do painel
+.sidebarFooter {
+  padding: 20px 15px;
+  border-top: 1px solid #e9ecef;
+  background: rgba(102, 126, 234, 0.03);
+}
+
+.sidebarActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebarBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: none;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #495057;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  i {
+    font-size: 16px;
+    color: #667eea;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #667eea08, #764ba208);
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .sidebarToggle {
+    span {
+      display: none;
+    }
+  }
+  
+  .sidebarHeader {
+    padding: 20px 15px 15px;
+    
+    h3 {
+      font-size: 16px;
+    }
+  }
+  
+  .sidebarNav {
+    padding: 15px 0;
+  }
+  
+  .sidebarItem {
+    padding: 0 10px;
+  }
+  
+  .sidebarLink {
+    padding: 12px 15px;
+    gap: 12px;
+    
+    i {
+      font-size: 18px;
+    }
+    
+    span {
+      font-size: 14px;
+    }
+  }
+  
+  .sidebarFooter {
+    padding: 15px 10px;
+  }
+}
+
+// Animação de entrada dos itens
+.sidebarOpen {
+  .sidebarItem {
+    animation: slideInRight 0.3s ease forwards;
+    
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Scrollbar personalizada
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.modal{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    width: 30px; 
+    height: 30px; 
+    padding: 0;
+    border: 0;
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background: transparent; 
+    transition: background-color 0.3s;
+
+&:hover {
+    background-color: #ff67a1;
+  }
+}
