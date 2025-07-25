@@ -24,7 +24,7 @@ function Login() {
               <input type="password" name='password' placeholder='Senha' />
               
             <div className={classes.btn}>
-              <button type="submit" className={classes.loginBtn}>Entrar na Conta</button>
+              <button type="button" className={classes.loginBtn}>Entrar na Conta</button>
      
             </div>
 

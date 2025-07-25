@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import PageHeaderHome from "../layout/Home/PageHeaderHome";
 import Register from "../layout/User/Register";
 import FooterHome from "../layout/Home/FooterHome";
@@ -15,12 +15,20 @@ useEffect (() => {
 
   getUsers();
 
-}, [])
+}, []);
 
 async function getUsers(){
 
 const response = await api.get ('/users')
 setUsers(response.data);
+}
+
+async function createUsers(){
+
+
+console.log(inputName)
+console.log(inputEmail)
+console.log(inputAge)
 }
 
 
