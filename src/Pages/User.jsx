@@ -1,36 +1,41 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import PageHeaderHome from "../layout/Home/PageHeaderHome";
 import Register from "../layout/User/Register";
 import FooterHome from "../layout/Home/FooterHome";
 import classes from '../Styles/User.module.scss';
 import { Routes, Route, Link } from "react-router-dom";
 import api from '../services/api'
+import axios from 'axios'
 
 
 function User() {
 
   const [users, setUsers] = useState([])
 
-useEffect (() => {
+  useEffect(() => {
 
-  getUsers();
+    getUsers();
 
-}, []);
+  }, []);
 
-async function getUsers(){
+  async function getUsers() {
 
-const response = await api.get ('/users')
-setUsers(response.data);
-}
+    const response = await api.get('/users')
+    setUsers(response.data);
+  }
 
-async function createUsers(){
-
-
-console.log(inputName)
-console.log(inputEmail)
-console.log(inputAge)
-}
-
+async function deleteUsers(id) {
+  if (!window.confirm('Deseja realmente deletar este usuário?')) return;
+  
+  try {
+    await api.delete(`/users/${id}`)  
+    getUsers();
+    alert("Usuário deletado com sucesso");
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    alert("Erro ao deletar usuário");
+  }
+} 
 
   return (
     <div className={classes.pageWrapper}>
@@ -61,9 +66,11 @@ console.log(inputAge)
                 <p>Idade: <span>{user.age}</span></p>
                 <p>Senha: <span>{user.password}</span></p>
               </div>
-              
-                <button><i className='bx bx-x'></i></button>
-              
+
+              <button onClick={() => deleteUsers(user.id)}>
+                <i className='bx bx-x'></i>
+              </button>
+
             </div>
 
           ))}

@@ -21,11 +21,18 @@ function AsideCategorias() {
     };
 
     const categoriasproducts = [
-        { nome: "Material Escolar", icone: "bx-pencil", link: "/products?categoria=escolar" },
-        { nome: "Material de Escritório", icone: "bx-briefcase", link: "/products?categoria=escritorio" },
-        { nome: "Artesanato", icone: "bx-palette", link: "/products?categoria=artesanato" },
+        { nome: "Novidades", icone: "bx-check-square", link: "/products?categoria=escolar" },
+        { nome: "Acessórios", icone: "bx-headphone", link: "/products?categoria=escolar" },
+        { nome: "Artes", icone: "bx-palette", link: "/products?categoria=escolar" },
+        { nome: "Brinquedos", icone: "bx-child", link: "/products?categoria=escolar" },
+        { nome: "Cardernos", icone: "bx-book", link: "/products?categoria=escolar" },
+        { nome: "Canetas", icone: "bx-pen", link: "/products?categoria=escritorio"},,
+        { nome: "Diversos", icone: "bx-home", link: "/products?categoria=artesanato" },
+        { nome: "Marca-texto", icone: "bx-pencil", link: "/products?categoria=escolar" },
+        { nome: "Material Escolar", icone: "bxs-school", link: "/products?categoria=escolar" },
+        { nome: "Escritório", icone: "bx-briefcase", link: "/products?categoria=escritorio"},
         { nome: "Papelaria", icone: "bx-file", link: "/products?categoria=papelaria" },
-        { nome: "Promoções", icone: "bx-tag", link: "/products?categoria=promocoes" }
+        { nome: "Promoções", icone: "bx-tag", link: "/products?categoria=promocoes" },
     ];
 
     return (
@@ -65,7 +72,7 @@ function AsideCategorias() {
                     <ul className={classes.sidebarMenu}>
                         <li className={classes.sidebarItem}>
                             <Link 
-                                to="/productos" 
+                                to="/products" 
                                 className={`${classes.sidebarLink} ${classes.allProductos}`}
                                 onClick={closeSidebar}
                             >

@@ -21,8 +21,8 @@ function AsideLoja() {
     };
 
     const categoriasproductsServices = [
-        { nome: "Impressão ", icone: "bx-printer"},
-        { nome: "Plastificação", icone: "bx-book-open" },
+        { nome: "Impressões ", icone: "bx-printer"},
+        { nome: "Plastificações", icone: "bx-book-open" },
         { nome: "Encardenações", icone: "bx-book" },
         { nome: "Carimbos", icone: "bx-color", },
         { nome: "Acessorios para informatica", icone: "bx-mouse",  }
