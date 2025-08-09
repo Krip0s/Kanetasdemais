@@ -2,9 +2,8 @@
    
 
     export const CATEGORIES =[
-        { key: 'all', label: "Todos os Produtos", icon: '' },
         { key: "Novidades", label:"Novidades", icon: "bx-check-square"},
-        { key: "Acessórios", label:"",  icon: "bx-headphone"},
+        { key: "Acessórios", label:"Acessórios",  icon: "bx-headphone"},
         { key: "Artes", label:"Artes", icon: "bx-palette"},
         { key: "Brinquedos", label:"Brinquedos", icon: "bx-child"},
         { key: "Cardernos", label:"Cadernos", icon: "bx-book"},
