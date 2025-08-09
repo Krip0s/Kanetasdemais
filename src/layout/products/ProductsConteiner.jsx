@@ -3,7 +3,7 @@ import { Routes, Route, Link, useSearchParams, useNavigate } from "react-router-
 import classes from '../../Styles/productsContainer.module.scss';
 import AddToCartButton from "../cart/AddToCartButton";
 import Paginacao from "../products/Paginação";
-import { CATEGORIES } from '../constants/categories';
+import { CATEGORIES } from '../../constants/Categories';
 
 function ProductsContainer({ onAddToCart }) {
   const [products, setProducts] = useState([]);
@@ -15,11 +15,8 @@ function ProductsContainer({ onAddToCart }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalProducts, setTotalProducts] = useState(0);
-  const Navigate = useNavigate();
+  const navigate = useNavigate(); // CORREÇÃO: mudado de Navigate para navigate (minúsculo)
   const categories = useMemo(() => CATEGORIES, []);
-
-  
-
 
   // Opções de ordenação
   const sortOptions = useMemo(() => [
@@ -77,49 +74,50 @@ function ProductsContainer({ onAddToCart }) {
 
   // Reset página quando filtro mudar
   useEffect(() => {
-  const categoriaFromURL = searchParams.get('categoria') || 'all';
-  if (categoriaFromURL !== filter) {
-    setFilter(categoriaFromURL);
-  }
-}, [searchParams, filter]);
+    const categoriaFromURL = searchParams.get('categoria') || 'all';
+    if (categoriaFromURL !== filter) {
+      setFilter(categoriaFromURL);
+    }
+  }, [searchParams, filter]);
 
   // Processamento dos produtos (filtro e ordenação no frontend como fallback)
-const processedProducts = useMemo(() => {
-  let filtered = products;
+  const processedProducts = useMemo(() => {
+    let filtered = products;
 
-  // Filtro por categoria (fallback se a API não filtrar)
-  if (filter !== 'all') {
-    filtered = products.filter(product => 
-      product.category?.toLowerCase() === filter.toLowerCase()
-    );
-  }
-
-  // Ordenação (fallback se a API não ordenar)
-  const sorted = [...filtered].sort((a, b) => {
-    // Primeiro, ordena por disponibilidade (produtos em estoque primeiro)
-    const aInStock = (a.stock || 0) > 0;
-    const bInStock = (b.stock || 0) > 0;
-    
-    if (aInStock && !bInStock) return -1;
-    if (!aInStock && bInStock) return 1;
-    
-    // Se ambos estão em estoque ou fora de estoque, aplica a ordenação selecionada
-    switch (sort) {
-      case 'price-low': 
-        return Number(a.price) - Number(b.price);
-      case 'price-high': 
-        return Number(b.price) - Number(a.price);
-      case 'name': 
-        return (a.name || '').localeCompare(b.name || '');
-      case 'name-desc': 
-        return (b.name || '').localeCompare(a.name || '');
-      default: 
-        return 0;
+    // Filtro por categoria (fallback se a API não filtrar)
+    if (filter !== 'all') {
+      filtered = products.filter(product => 
+        product.category?.toLowerCase() === filter.toLowerCase()
+      );
     }
-  });
 
-  return sorted;
-}, [products, filter, sort]);
+    // Ordenação (fallback se a API não ordenar)
+    const sorted = [...filtered].sort((a, b) => {
+      // Primeiro, ordena por disponibilidade (produtos em estoque primeiro)
+      const aInStock = (a.stock || 0) > 0;
+      const bInStock = (b.stock || 0) > 0;
+      
+      if (aInStock && !bInStock) return -1;
+      if (!aInStock && bInStock) return 1;
+      
+      // Se ambos estão em estoque ou fora de estoque, aplica a ordenação selecionada
+      switch (sort) {
+        case 'price-low': 
+          return Number(a.price) - Number(b.price);
+        case 'price-high': 
+          return Number(b.price) - Number(a.price);
+        case 'name': 
+          return (a.name || '').localeCompare(b.name || '');
+        case 'name-desc': 
+          return (b.name || '').localeCompare(a.name || '');
+        default: 
+          return 0;
+      }
+    });
+
+    return sorted;
+  }, [products, filter, sort]);
+
   // Handlers
   const handleCategoryChange = useCallback((category) => {
     setFilter(category);
@@ -129,7 +127,7 @@ const processedProducts = useMemo(() => {
     } else {
       navigate(`/products?categoria=${category}`);
     }
-  }, [navigate]);
+  }, [navigate]); // CORREÇÃO: dependência também corrigida
 
   const handleSortChange = useCallback((event) => {
     setSort(event.target.value);
@@ -177,8 +175,6 @@ const processedProducts = useMemo(() => {
       {/* Header com informações */}
       <div className={classes.header}>
         <h1>Nossos Produtos</h1>
-        
-        
       </div>
 
       {/* Filtros de categoria */}
