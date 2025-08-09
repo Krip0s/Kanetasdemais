@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
+import { MaskedInput } from 'react-input-mask';
 import classes from '../../Styles/Register.module.scss';
 import PageHeaderHome from '../Home/PageHeaderHome';
 import FooterHome from "../../layout/Home/FooterHome";
@@ -18,21 +19,33 @@ function Register() {
   const inputName = useRef()
   const inputEmail = useRef()
   const inputAge = useRef()
+  const inputCpf = useRef()
   const inputPassword = useRef()
   const inputConfirmPassword = useRef()
 
   const validateFormLocally = (formData) => {
 
-    if (formData.password !== formData.confirmPassword) {
-      return 'As senhas não coincidem'
+   if (!formData.name) return 'Nome é obrigatório';
+    if (!formData.email) return 'Email é obrigatório';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      return 'Email inválido';
     }
-    return null
+    if (!formData.cpf) return 'CPF é obrigatório';
+    if (!/^\d{11}$/.test(formData.cpf.replace(/\D/g, ''))) {
+      return 'CPF inválido (deve conter 11 dígitos)';
+    }
+    if (!formData.password) return 'Senha é obrigatória';
+    if (formData.password !== formData.confirmPassword) {
+      return 'As senhas não coincidem';
+    }
+    return null;
   }
 
   const clearForm = () => {
     inputName.current.value = ''
     inputEmail.current.value = ''
     inputAge.current.value = ''
+    inputCpf.current.value = ''
     inputPassword.current.value = ''
     inputConfirmPassword.current.value = ''
   }
@@ -42,6 +55,7 @@ function Register() {
       name: inputName.current.value.trim(),
       email: inputEmail.current.value.trim(),
       age: inputAge.current.value,
+      cpf: inputCpf.current.value,
       password: inputPassword.current.value,
       confirmPassword: inputConfirmPassword.current.value
     }
@@ -84,7 +98,8 @@ function Register() {
         name: formData.name,
         email: formData.email,
         password: formData.password,
-        age: formData.age ? parseInt(formData.age) : undefined
+        age: formData.age ? parseInt(formData.age) : undefined,
+         cpf: formData.cpf,
       }
 
 
@@ -106,13 +121,6 @@ function Register() {
 
   
 
-  async function createUsers() {
-
-
-    console.log(inputName)
-    console.log(inputEmail)
-    console.log(inputAge)
-  }
 
   return (
     <>
@@ -154,6 +162,7 @@ function Register() {
 
             <input type="text" name='name' placeholder='Nome Completo' ref={inputName} disabled={loading} />
             <input type="email" name='email' placeholder='Email' ref={inputEmail} disabled={loading} />
+             <input type="text" name='cpf' placeholder='CPF' ref={inputCpf} disabled={loading} />
             <input type="number" name='age' placeholder='Idade' ref={inputAge} disabled={loading} />
             <input type="password" name='password' placeholder='Senha' ref={inputPassword} disabled={loading} />
             <input type="password" name='confirmPassword' placeholder='Confirme Sua Senha' ref={inputConfirmPassword} disabled={loading} />

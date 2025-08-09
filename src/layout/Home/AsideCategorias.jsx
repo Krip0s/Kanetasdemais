@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import { CATEGORIES } from "../../constants/Categories";    
 import classes from '../../Styles/Sidebar.module.scss';
 
 function AsideCategorias() {
@@ -20,20 +21,13 @@ function AsideCategorias() {
         setIsOpen(false);
     };
 
-    const categoriasproducts = [
-        { nome: "Novidades", icone: "bx-check-square", link: "/products?categoria=escolar" },
-        { nome: "Acessórios", icone: "bx-headphone", link: "/products?categoria=escolar" },
-        { nome: "Artes", icone: "bx-palette", link: "/products?categoria=escolar" },
-        { nome: "Brinquedos", icone: "bx-child", link: "/products?categoria=escolar" },
-        { nome: "Cardernos", icone: "bx-book", link: "/products?categoria=escolar" },
-        { nome: "Canetas", icone: "bx-pen", link: "/products?categoria=escritorio"},,
-        { nome: "Diversos", icone: "bx-home", link: "/products?categoria=artesanato" },
-        { nome: "Marca-texto", icone: "bx-pencil", link: "/products?categoria=escolar" },
-        { nome: "Material Escolar", icone: "bxs-school", link: "/products?categoria=escolar" },
-        { nome: "Escritório", icone: "bx-briefcase", link: "/products?categoria=escritorio"},
-        { nome: "Papelaria", icone: "bx-file", link: "/products?categoria=papelaria" },
-        { nome: "Promoções", icone: "bx-tag", link: "/products?categoria=promocoes" },
-    ];
+    const categoriasproducts = CATEGORIES.map(cat => ({
+        nome: cat.label,
+        icone: cat.icon,
+        link: cat.key === 'all' ? '/products' : `/products?categoria=${cat.key.toLowerCase()}`
+    }))
+       
+
 
     return (
         <>

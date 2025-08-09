@@ -1,4 +1,5 @@
 import React from "react";
+import classes from '../../Styles/style.module.scss';
 
 const AddToCartButton = ({ item, onAddToCart }) => {
   const handleClick = () => {
@@ -8,10 +9,10 @@ const AddToCartButton = ({ item, onAddToCart }) => {
   return (
     <button 
       onClick={handleClick}
-      type="button"
-      aria-label={`Adicionar ${item.name} ao cart`}
+      className={classes.btn}
+      aria-label={`Adicionar ${item.name} ao carrinho`}
     >
-      Adicionar ao cart
+      Adicionar ao carrinho
     </button>
   );
 };

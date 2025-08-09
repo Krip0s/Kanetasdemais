@@ -10,6 +10,22 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.btncart{
+ background: #ff549c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+  font-family: inherit;
+}
+
+.btncart:hover {
+  background: #e9367a;
+}
 
 // Estilos do header
 .cartHeader {
@@ -397,3 +413,4 @@ button {
     margin-top: 20px;
   }
 }
+

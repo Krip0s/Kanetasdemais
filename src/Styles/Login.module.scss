@@ -53,7 +53,7 @@ body {
         padding: 10px 15px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        margin-bottom: 16px;
+        margin-bottom: 1vh;
       }
 
       input:last-child{
@@ -62,32 +62,61 @@ body {
 
       
 
-.btn{
-  
+.btnContainer {
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  gap: 15px;
   margin-top: 20px;
 
-  .loginBtn{
-  
-  border-radius: 50px;
-  background: transparent;
-  border: 2px solid #eee;
-  font-size: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 10px 20px;
+  .LoginBtn {
+    width: 50%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+     border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
-  &:hover{
-    color: white;
-    background-color: #28a745;
+    &:hover {
+      background: #28a745;
+    }
+
+    &:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+    }
   }
-    
-  
-}
 
-}
+  .secondaryButtons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
 
+    .BtnOther {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 50px;
+      background: transparent;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #f0f0f0;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
 
     }

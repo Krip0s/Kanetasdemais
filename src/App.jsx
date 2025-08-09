@@ -8,6 +8,7 @@ import Cart from "./Pages/cart";
 import User from "./Pages/User";
 import Register from'./layout/User/Register';
 import Login from './layout/User/Login';
+import Dashboard from './layout/User/Dashboard';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/User" element={<User />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
       
     </div>
